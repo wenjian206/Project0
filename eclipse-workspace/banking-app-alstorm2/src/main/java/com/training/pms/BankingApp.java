@@ -26,12 +26,16 @@ public class BankingApp {
 		String password = null;
 
 		while (true) {
+			System.out.println("#####################################");
 			System.out.println("B A N K I N G  -  APP   MENU");
-
+			System.out.println("#####################################");
+			
 			System.out.println("1. Register ");
 			System.out.println("2. Customer Login ");
 			System.out.println("3. Employee Login ");
+			System.out.println("4. About Us ");
 			System.out.println("Please enter your choice : ");
+			
 			choice = scanner.nextInt();
 
 			switch (choice) {
@@ -106,6 +110,12 @@ public class BankingApp {
 					continue;
 				}
 				
+			case 4:
+				//About Us
+				System.out.println("WELCOME TO ABOUT US SECTION");
+				System.out.println("The Banking app is a console-based application that simulates banking operations.");
+				System.out.println("A customer can apply for an account, view their balance, and make withdrawals, deposits and transfer.");
+				System.out.println("An employee can manage accounts and view account balances for their customers.");
 
 			default:
 				System.out.println("Invalid choice");
