@@ -3,6 +3,8 @@
 The Banking app is a console-based application that simulates banking operations. 
 A customer can apply for an account, view their balance, and make withdrawals, deposits and transfer. 
 An employee can manage accounts and view account balances for their customers.
+
+# Requirement
 The Banking app should meet the requirement as below:
     1. Functionality should reflect the below user stories.
     2. Data is stored in a database. 
@@ -11,8 +13,8 @@ The Banking app should meet the requirement as below:
     5. All input is received using the java.util.Scanner class. 
     6. A minimum of one (1) JUnit test is written to test some functionality. 
 
-User Story:
-# 1. Register New Account
+# User Story:
+1. Register New Account
 #####################################
 B A N K I N G  -  APP   MENU
 #####################################
@@ -31,7 +33,7 @@ Adding users: Login [loginId=-1, username=Coco, password=Coco@123]
 1 user registered successfully
 Congratulations, your Account: Coco is registered successfully
 
-# 2.Login as Customer
+2.Login as Customer
 #####################################
 B A N K I N G  -  APP   MENU
 #####################################
@@ -56,7 +58,7 @@ Welcome Coco
 9. E X I T 
 Please enter your choice: 
 
-# 3. Login as Employee
+3. Login as Employee
 #####################################
 B A N K I N G  -  APP   MENU
 #####################################
