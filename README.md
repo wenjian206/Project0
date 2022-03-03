@@ -14,7 +14,7 @@ The Banking app should meet the requirement as below:
     6. A minimum of one (1) JUnit test is written to test some functionality. 
 
 # User Story:
-1. Register New Account
+//1. Register New Account
 #####################################
 B A N K I N G  -  APP   MENU
 #####################################
@@ -33,7 +33,7 @@ Adding users: Login [loginId=-1, username=Coco, password=Coco@123]
 1 user registered successfully
 Congratulations, your Account: Coco is registered successfully
 
-2.Login as Customer
+//2.Login as Customer
 #####################################
 B A N K I N G  -  APP   MENU
 #####################################
@@ -59,7 +59,7 @@ Welcome Coco
 Please enter your choice: 
 
 
-3. Login as Employee
+//3. Login as Employee
 #####################################
 B A N K I N G  -  APP   MENU
 #####################################
