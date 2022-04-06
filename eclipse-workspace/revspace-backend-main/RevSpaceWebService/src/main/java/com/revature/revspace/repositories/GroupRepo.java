@@ -4,9 +4,10 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.revature.revspace.models.Group;
+import com.revature.revspace.models.GroupInfo;
 
-
-public interface GroupRepo extends CrudRepository<Group, Integer>{	
-	List<Group> findByGroupName(String groupName);
+//groupRepo
+public interface GroupRepo extends CrudRepository<GroupInfo, Integer>{	
+	List<GroupInfo> findByGroupName(String groupName);
+	List<GroupInfo> findByGroupType(String groupType);
 }

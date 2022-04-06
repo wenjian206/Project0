@@ -6,9 +6,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.revature.revspace.models.Group;
+import com.revature.revspace.models.GroupInfo;
 import com.revature.revspace.repositories.GroupRepo;
 
+//groupServiceImpl
 public class groupServiceImpl implements groupService{
 	
 	@Autowired
@@ -16,7 +17,7 @@ public class groupServiceImpl implements groupService{
 	
 	@Override
 	@Transactional
-	public String addGroup(Group group) {
+	public String addGroup(GroupInfo group) {
 		if(group.getGroupName().length()<0)
 			return "Group could not be saved without Group Name";
 		else {
@@ -27,7 +28,7 @@ public class groupServiceImpl implements groupService{
 
 	@Override
 	@Transactional
-	public String updateGroup(int groupId, Group group) {
+	public String updateGroup(int groupId, GroupInfo group) {
 		if(group.getGroupName().length()<0)
 			return "Group could not be updated";
 		else {
@@ -37,19 +38,19 @@ public class groupServiceImpl implements groupService{
 	}
 
 	@Override
-	public List<Group> getGroups() {
-		return (List<Group>) groupRepo.findAll();
+	public List<GroupInfo> getGroups() {
+		return (List<GroupInfo>) groupRepo.findAll();
 	}
 
 	@Override
-	public Group getGroup(int groupId) {
-		Optional<Group> group =  groupRepo.findById(groupId);
+	public GroupInfo getGroup(int groupId) {
+		Optional<GroupInfo> group =  groupRepo.findById(groupId);
 		return group.get();
 	}
 
 	@Override
 	public boolean isGroupExists(int groupId) {
-		Optional<Group> group =  groupRepo.findById(groupId);
+		Optional<GroupInfo> group =  groupRepo.findById(groupId);
 		return group.isPresent();
 	}
 
@@ -66,9 +67,13 @@ public class groupServiceImpl implements groupService{
 	}
 	
 	@Override
-	public List<Group> getGroupByName(String groupName) {
+	public List<GroupInfo> getGroupByName(String groupName) {
 	return groupRepo.findByGroupName(groupName);
 	}
 
+	@Override
+	public List<GroupInfo> getGroupByType(String groupType) {
+	return groupRepo.findByGroupType(groupType);
+	}
 
 }
